@@ -82,7 +82,7 @@ export default async function Example({ lang }: Props): Promise<JSX.Element> {
             </div>
             <div className='flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10'>
               <GemStoneIcon
-                className='h-7 w-7 flex-none text-indigo-400'
+                className='h-7 w-7 flex-none text-red-400'
                 aria-hidden='true'
               />
               <div className='text-base leading-7'>

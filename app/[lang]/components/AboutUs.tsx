@@ -1,5 +1,8 @@
+import Image from "next/image";
 import { RecyclingIcon, MiningIcon, GemStoneIcon } from "../components/icons";
 import { getDictionary } from "../../../get-dictionary";
+import { IncomingMessage } from "http";
+import AboutUsImg from "../../../public/AboutUsImg.avif";
 type Props = {
   lang: "tr" | "fr" | "en";
 };
@@ -25,9 +28,9 @@ export default async function Example({ lang }: Props): Promise<JSX.Element> {
       <div className='mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end'>
         <div className='lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2'>
           <div className='relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0'>
-            <img
+            <Image
               className='absolute inset-0 h-full w-full bg-gray-50 object-cover'
-              src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80'
+              src={AboutUsImg}
               alt=''
             />
           </div>
@@ -47,42 +50,38 @@ export default async function Example({ lang }: Props): Promise<JSX.Element> {
               <ul role='list' className='mt-8 space-y-8 text-gray-600'>
                 <li className='flex gap-x-3'>
                   <RecyclingIcon
-                    className='mt-1 h-5 w-5 flex-none text-indigo-600'
+                    className='mt-1 h-5 w-5 flex-none text-green-600'
                     aria-hidden='true'
                   />
                   <span>
                     <strong className='font-semibold text-gray-900'>
                       {dictionary.homePage.aboutUs.p1.p1Strong}
-                    </strong>{" "}
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Maiores impedit perferendis suscipit eaque, iste dolor
-                    cupiditate blanditiis ratione.
+                    </strong>
+                    {dictionary.homePage.aboutUs.p1.p1Normal}
                   </span>
                 </li>
                 <li className='flex gap-x-3'>
                   <MiningIcon
-                    className='mt-1 h-5 w-5 flex-none text-indigo-600'
+                    className='mt-1 h-5 w-5 flex-none text-yellow-600'
                     aria-hidden='true'
                   />
                   <span>
                     <strong className='font-semibold text-gray-900'>
-                      Mining Solutions
-                    </strong>{" "}
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                    qui lorem cupidatat commodo.
+                      {dictionary.homePage.aboutUs.p2.p2Strong}
+                    </strong>
+                    {dictionary.homePage.aboutUs.p2.p2Normal}
                   </span>
                 </li>
                 <li className='flex gap-x-3'>
                   <GemStoneIcon
-                    className='mt-1 h-7 w-7 flex-none text-indigo-600'
+                    className='mt-1 h-7 w-7 flex-none text-red-600'
                     aria-hidden='true'
                   />
                   <span>
                     <strong className='font-semibold text-gray-900'>
-                      Aggregate, Sand and Stone Washing Solutions.
+                      {dictionary.homePage.aboutUs.p3.p3Strong}
                     </strong>{" "}
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
+                    {dictionary.homePage.aboutUs.p3.p3Normal}
                   </span>
                 </li>
               </ul>
