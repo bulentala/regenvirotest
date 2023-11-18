@@ -1,8 +1,8 @@
 import { getDictionary } from "../../get-dictionary";
 import { Locale } from "../../i18n-config";
-import Counter from "./components/counter";
 import LocaleSwitcher from "./components/locale-switcher";
-
+import Hero from "./components/Hero";
+import AboutUs from "./components/AboutUs";
 export default async function IndexPage({
   params: { lang },
 }: {
@@ -12,14 +12,13 @@ export default async function IndexPage({
 
   return (
     <div>
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+      <Hero lang={lang} />
+      <AboutUs lang={lang} />
+      <pre>{JSON.stringify(lang, null, 2)}</pre>
+      <pre>{JSON.stringify(dictionary, null, 2)}</pre>
       <LocaleSwitcher />
-      <p>Current locale: {lang}</p>
-      <p>
-        This text is rendered on the server:{" "}
-        {dictionary["server-component"].welcome}
-      </p>
-      <Counter dictionary={dictionary.counter} />
+      <p>Lang: {lang}</p>
+      <p>{dictionary["server-component"].welcome}</p>
     </div>
   );
 }

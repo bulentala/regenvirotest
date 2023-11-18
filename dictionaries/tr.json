@@ -1,0 +1,43 @@
+{
+  "server-component": {
+    "welcome": "TÜRKÇE"
+  },
+  "counter": {
+    "increment": "Zuwachs",
+    "decrement": "Dekrementieren"
+  },
+  "homePage": {
+    "hero": {
+      "title": "OUR OWN WORLD THAT WE TRANSFORM",
+      "subTitle": "Recycle your waste and feel your touch to the environment and leave your mark in a green world!",
+      "cardOne": {
+        "title": "Recycling Systems",
+        "description": "Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur."
+      },
+      "cardTwo": {
+        "title": "Mining Solutions",
+        "description": "Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur."
+      },
+      "cardThree": {
+        "title": "Aggregate, Sand and Stone Washing Solutions",
+        "description": "Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit."
+      }
+    },
+    "aboutUs": {
+      "title": "REG; We work to reduce your waste and enable you to turn it into useful products.",
+      "description": "In our opinion, waste does not have to be an expense. Instead of the expense of disposing of waste, it is possible to turn them into valuable products. That’s why REG offers washing solutions to produce construction aggregate from waste products.",
+      "p1": {
+        "p1Strong": "Recycling Systems",
+        "p1Normal": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+      },
+      "p2": {
+        "p2Strong": "Mining Solutions",
+        "p2Normal": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."
+      },
+      "p3": {
+        "p3Strong": "Aggregate, Sand and Stone Washing Solutions.",
+        "p3Normal": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis."
+      }
+    }
+  }
+}
