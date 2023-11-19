@@ -1,5 +1,5 @@
 import { RecyclingIcon, MiningIcon, GemStoneIcon } from "../components/icons";
-
+import { getDictionary } from "../../../get-dictionary";
 interface Card {
   name: string;
   description: string;
@@ -9,12 +9,9 @@ interface Card {
 type Props = {
   lang: string;
 };
+type Locale = /*unresolved*/ any;
 
-import { getDictionary } from "../../../get-dictionary";
-export default async function Example({ lang }: Props): Promise<JSX.Element> {
-  if (lang !== "tr" && lang !== "fr" && lang !== "en") {
-    throw new Error(`Invalid lang value: ${lang}`);
-  }
+export default async function Hero({ lang }: { lang: Locale }) {
   const dictionary = await getDictionary(lang);
   return (
     <>

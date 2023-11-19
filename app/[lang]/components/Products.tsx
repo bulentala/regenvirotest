@@ -6,7 +6,7 @@ import {
   ReceiptRefundIcon,
   UsersIcon,
 } from "@heroicons/react/24/outline";
-
+import { getDictionary } from "../../../get-dictionary";
 const actions = [
   {
     title: "Rock Washers",
@@ -52,11 +52,12 @@ const actions = [
   },
 ];
 
-function classNames(...classes) {
+function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
-
-export default function Example() {
+type Locale = /*unresolved*/ any;
+export default async function ProductsPage({ lang }: { lang: Locale }) {
+  const dictionary = await getDictionary(lang);
   return (
     <div className='divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0'>
       {actions.map((action, actionIdx) => (

@@ -18,7 +18,8 @@ type Dictionary = {
     };
   };
 };
-export default async function Example({ lang }: Props): Promise<JSX.Element> {
+type Locale = /*unresolved*/ any;
+export default async function Example({ lang }: { lang: Locale }) {
   if (lang !== "tr" && lang !== "fr" && lang !== "en") {
     throw new Error(`Invalid lang value: ${lang}`);
   }
