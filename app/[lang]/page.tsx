@@ -16,8 +16,7 @@ export default async function IndexPage({
   const dictionary = await getDictionary(lang);
 
   return (
-    <div>
-      <Header lang={lang} />
+    <>
       <Hero lang={lang} />
       <AboutUs lang={lang} />
       <Products lang={lang} />
@@ -31,7 +30,6 @@ export default async function IndexPage({
         <p>Lang: {lang}</p>
         <p>{dictionary["server-component"].welcome}</p>
       </div>*/}
-      <Footer lang={lang} />
-    </div>
+    </>
   );
 }

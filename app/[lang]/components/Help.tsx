@@ -10,7 +10,7 @@ type Locale = /*unresolved*/ any;
 export default async function HelpPage({ lang }: { lang: Locale }) {
   const dictionary = await getDictionary(lang);
   return (
-    <div className='relative bg-white '>
+    <div className='relative bg-gray-50 '>
       <div className='mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end'>
         <div className='lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2'>
           <div className='relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0'>

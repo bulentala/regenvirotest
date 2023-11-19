@@ -1,5 +1,7 @@
 import { i18n } from "../../i18n-config";
 import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
@@ -13,7 +15,11 @@ export default function Root({
 }) {
   return (
     <html lang={params.lang}>
-      <body>{children}</body>
+      <body>
+        <Header lang={params.lang} />
+        {children}
+        <Footer lang={params.lang} />
+      </body>
     </html>
   );
 }
